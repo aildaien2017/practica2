@@ -1,0 +1,29 @@
+<mat-grid-list cols="3" rowHeight="3:1">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+    <mat-toolbar color="primary">
+      <span>Form Login</span>
+    </mat-toolbar>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+
+    <form class="example-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Username" id="username" name="username" ngModel>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password" id="password" name="password" ngModel>
+        </mat-form-field>
+          <button mat-raised-button color="primary">Login</button>
+      </div>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
